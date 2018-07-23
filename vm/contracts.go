@@ -25,18 +25,18 @@ import (
 	"crypto/ecdsa"
 	"strings"
 
+	"fmt"
+	"github.com/combchain/combchain/crypto"
+	"github.com/combchain/combchain/crypto/bn256"
 	"github.com/combchain/go-combchain/accounts/abi"
 	"github.com/combchain/go-combchain/accounts/keystore"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/hexutil"
 	"github.com/combchain/go-combchain/common/math"
 	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/crypto"
-	"github.com/combchain/go-combchain/crypto/bn256"
 	"github.com/combchain/go-combchain/log"
 	"github.com/combchain/go-combchain/params"
 	"golang.org/x/crypto/ripemd160"
-	"fmt"
 )
 
 // RunPrecompiledContract runs and evaluates the output of a precompiled contract.
@@ -427,7 +427,7 @@ var (
 
 	ErrOTAReused = errors.New("OTA is reused")
 
-	StampValueSet   = make(map[string]string, 5)
+	StampValueSet    = make(map[string]string, 5)
 	combCoinValueSet = make(map[string]string, 10)
 )
 

@@ -22,8 +22,8 @@ import (
 
 	"bytes"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/params"
 )
 

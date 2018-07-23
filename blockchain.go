@@ -27,7 +27,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	lru "github.com/hashicorp/golang-lru"
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/mclock"
 	"github.com/combchain/go-combchain/consensus"
@@ -35,7 +35,6 @@ import (
 	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/event"
 	"github.com/combchain/go-combchain/log"
@@ -43,6 +42,7 @@ import (
 	"github.com/combchain/go-combchain/params"
 	"github.com/combchain/go-combchain/rlp"
 	"github.com/combchain/go-combchain/trie"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 var (

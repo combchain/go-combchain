@@ -23,12 +23,12 @@ import (
 	"os"
 	"testing"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/math"
 	"github.com/combchain/go-combchain/consensus/ethash"
 	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 )
@@ -170,7 +170,7 @@ func benchInsertChain(b *testing.B, disk bool, gen func(int, *BlockGen)) {
 	genesis := gspec.MustCommit(db)
 	engine := ethash.NewFaker(db)
 	chainman, _ := NewBlockChain(db, gspec.Config, engine, vm.Config{})
-	chainEnv := NewChainEnv(params.TestChainConfig, gspec, engine,chainman, db)
+	chainEnv := NewChainEnv(params.TestChainConfig, gspec, engine, chainman, db)
 	chain, _ := chainEnv.GenerateChain(genesis, b.N, gen)
 
 	// Time the insertion of the new chain.

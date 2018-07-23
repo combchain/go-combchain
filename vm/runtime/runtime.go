@@ -21,10 +21,10 @@ import (
 	"math/big"
 	"time"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 )
@@ -53,7 +53,7 @@ type Config struct {
 func setDefaults(cfg *Config) {
 	if cfg.ChainConfig == nil {
 		cfg.ChainConfig = &params.ChainConfig{
-			ChainId:        big.NewInt(1),
+			ChainId: big.NewInt(1),
 			//HomesteadBlock: new(big.Int),
 			//DAOForkBlock:   new(big.Int),
 			//DAOForkSupport: false,

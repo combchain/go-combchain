@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/combchain/combchain/crypto/sha3"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/crypto/sha3"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/rlp"
 )

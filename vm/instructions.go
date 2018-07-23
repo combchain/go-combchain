@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/math"
 	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/params"
 )
 
@@ -578,7 +578,7 @@ func opCreate(pc *uint64, evm *EVM, contract *Contract, memory *Memory, stack *S
 	)
 
 	//if evm.ChainConfig().IsEIP150(evm.BlockNumber) {
-		gas -= gas / 64
+	gas -= gas / 64
 	//}
 
 	contract.UseGas(gas)

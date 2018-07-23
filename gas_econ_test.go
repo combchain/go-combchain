@@ -10,6 +10,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/accounts/abi"
 	"github.com/combchain/go-combchain/accounts/keystore"
 	"github.com/combchain/go-combchain/common"
@@ -18,7 +19,6 @@ import (
 	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 )

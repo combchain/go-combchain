@@ -25,9 +25,9 @@ import (
 	"math/big"
 	"sync/atomic"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/hexutil"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/rlp"
 )
 
