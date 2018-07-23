@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/accounts"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/consensus"
@@ -28,7 +29,6 @@ import (
 	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 )

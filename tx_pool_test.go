@@ -29,11 +29,11 @@ import (
 
 	"bytes"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/event"
 	"github.com/combchain/go-combchain/params"
@@ -109,7 +109,7 @@ func validateTxPoolInternals(pool *TxPool) error {
 	for addr, txs := range pool.pending {
 		// Find the last transaction
 		var last uint64
-		for nonce, _ := range txs.txs.items {
+		for nonce := range txs.txs.items {
 			if last < nonce {
 				last = nonce
 			}
@@ -1523,7 +1523,7 @@ func (CTStateDB) ForEachStorage(common.Address, func(common.Hash, common.Hash) b
 func (CTStateDB) ForEachStorageByteArray(common.Address, func(common.Hash, []byte) bool) {}
 
 var (
-	balanceAddr = "0x0000000000000000000000001000000000000000";
+	balanceAddr = "0x0000000000000000000000001000000000000000"
 	accountAddr = "0x03b854fc72fb01a0e36ee918b085ff52280d1842eeb282b389a1fb3d3752ed7aed"
 )
 
@@ -1533,7 +1533,7 @@ func (CTStateDB) GetStateByteArray(addr common.Address, hs common.Hash) []byte {
 
 		if bytes.Equal(common.FromHex(balanceAddr), addr.Bytes()) {
 			return common.FromHex(accountAddr)
-		} else if  dbMockRetVal!=nil {
+		} else if dbMockRetVal != nil {
 			return dbMockRetVal.Bytes()
 		} else {
 			return nil

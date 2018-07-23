@@ -11,10 +11,9 @@ import (
 
 	"strconv"
 
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/log"
-
 )
 
 var (
@@ -154,8 +153,6 @@ func CheckOTALongAddrExist(statedb StateDB, otaLongAddr []byte) (exist bool, bal
 	return true, balance, nil
 }
 
-
-
 func BatCheckOTAExist(statedb StateDB, otaLongAddrs [][]byte) (exist bool, balance *big.Int, unexistOta []byte, err error) {
 	if statedb == nil || len(otaLongAddrs) == 0 {
 		return false, nil, nil, ErrUnknown
@@ -183,7 +180,6 @@ func BatCheckOTAExist(statedb StateDB, otaLongAddrs [][]byte) (exist bool, balan
 
 	return true, balance, nil, nil
 }
-
 
 func GetUnspendOTATotalBalance(statedb StateDB) (*big.Int, error) {
 	if statedb == nil {
@@ -305,11 +301,11 @@ func GetOTAInfoFromAX(statedb StateDB, otaAX []byte) (otacombAddr []byte, balanc
 }
 
 type GetOTASetEnv struct {
-	otaAX         []byte
-	setNum        int
-	getNum        int
-	loopTimes     int
-	rnd           int
+	otaAX          []byte
+	setNum         int
+	getNum         int
+	loopTimes      int
+	rnd            int
 	otacombAddrSet [][]byte
 }
 

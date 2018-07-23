@@ -23,8 +23,8 @@ import (
 	"math/rand"
 	"reflect"
 
+	"github.com/combchain/combchain/crypto/sha3"
 	"github.com/combchain/go-combchain/common/hexutil"
-	"github.com/combchain/go-combchain/crypto/sha3"
 )
 
 const (

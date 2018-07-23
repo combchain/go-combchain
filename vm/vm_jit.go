@@ -39,7 +39,7 @@ import (
 	"unsafe"
 
 	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/crypto"
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/params"
 )
 

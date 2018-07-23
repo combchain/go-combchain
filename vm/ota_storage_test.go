@@ -4,9 +4,9 @@ package vm
 
 import (
 	"bytes"
+	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/crypto"
 	"github.com/combchain/go-combchain/ethdb"
 	"math/big"
 	"testing"
@@ -1097,7 +1097,7 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
 		)
 
 		setLen := 3
@@ -1114,8 +1114,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 3
 		)
@@ -1138,8 +1138,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 1
 		)
@@ -1162,8 +1162,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 1
 		)
@@ -1203,8 +1203,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 2
 		)
@@ -1225,8 +1225,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 1
 		)
@@ -1267,8 +1267,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 2
 		)
@@ -1321,8 +1321,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 3
 		)
@@ -1344,8 +1344,8 @@ func TestGetOTASet(t *testing.T) {
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 			otacombAddr = common.FromHex(otaShortAddrs[6])
-			otaAX      = otacombAddr[1 : 1+common.HashLength]
-			balanceSet = big.NewInt(10)
+			otaAX       = otacombAddr[1 : 1+common.HashLength]
+			balanceSet  = big.NewInt(10)
 
 			setLen = 4
 		)
@@ -1366,7 +1366,7 @@ func TestGetOTASet(t *testing.T) {
 			db, _      = ethdb.NewMemDatabase()
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
-			otacombAddr         = common.FromHex(otaShortAddrs[6])
+			otacombAddr        = common.FromHex(otaShortAddrs[6])
 			otaMixSetAddrBytes = make([][]byte, 0, 100)
 			otaAX              = otacombAddr[1 : 1+common.HashLength]
 			balanceSet         = big.NewInt(10)
@@ -1435,7 +1435,7 @@ func TestGetOTASet(t *testing.T) {
 			db, _      = ethdb.NewMemDatabase()
 			statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
-			otacombAddr         = common.FromHex(otaShortAddrs[6])
+			otacombAddr        = common.FromHex(otaShortAddrs[6])
 			otaMixSetAddrBytes = make([][]byte, 0, 100)
 			otaAX              = otacombAddr[1 : 1+common.HashLength]
 			balanceSet         = big.NewInt(10)
@@ -1540,7 +1540,7 @@ func TestCheckOTAImageExist(t *testing.T) {
 		statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 		otacombAddr = common.FromHex(otaShortAddrs[7])
-		balanceSet = big.NewInt(10)
+		balanceSet  = big.NewInt(10)
 	)
 
 	otaImage := crypto.Keccak256(otacombAddr)
@@ -1588,7 +1588,7 @@ func TestAddOTAImage(t *testing.T) {
 		statedb, _ = state.New(common.Hash{}, state.NewDatabase(db))
 
 		otacombAddr = common.FromHex(otaShortAddrs[7])
-		balanceSet = big.NewInt(10)
+		balanceSet  = big.NewInt(10)
 	)
 
 	otaImage := crypto.Keccak256(otacombAddr)
