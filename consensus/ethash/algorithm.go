@@ -26,11 +26,11 @@ import (
 	"time"
 	"unsafe"
 
+	"github.com/combchain/combchain/crypto"
+	"github.com/combchain/combchain/crypto/sha3"
 	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/bitutil"
-	"github.com/combchain/go-combchain/crypto"
-	"github.com/combchain/go-combchain/crypto/sha3"
 )
 
 const (
