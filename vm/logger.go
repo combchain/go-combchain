@@ -26,7 +26,7 @@ import (
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/hexutil"
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 type Storage map[common.Hash]common.Hash

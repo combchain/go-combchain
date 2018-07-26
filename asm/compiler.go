@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/core/vm"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // Compiler contains information about the parsed source
@@ -257,7 +257,7 @@ func toBinary(text string) vm.OpCode {
 }
 
 type compileError struct {
-	got  string
+	got   string
 	combt string
 
 	lineno int
@@ -275,7 +275,7 @@ var (
 func compileErr(c token, got, combt string) error {
 	return compileError{
 		got:    got,
-		combt:   combt,
+		combt:  combt,
 		lineno: c.lineno,
 	}
 }

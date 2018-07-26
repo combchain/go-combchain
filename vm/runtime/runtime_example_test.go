@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/vm/runtime"
+	"github.com/combchain/go-combchain/vm/runtime"
 )
 
 func ExampleExecute() {

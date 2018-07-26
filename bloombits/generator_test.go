@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Tests that batched bloom bits are correctly rotated from the input bloom

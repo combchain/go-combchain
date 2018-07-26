@@ -6,8 +6,8 @@ import (
 	"bytes"
 	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/state"
 	"github.com/combchain/go-combchain/ethdb"
+	"github.com/combchain/go-combchain/state"
 	"math/big"
 	"testing"
 )

@@ -19,7 +19,7 @@ package bloombits
 import (
 	"errors"
 
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 // errSectionOutOfBounds is returned if the user tried to add more bloom filters

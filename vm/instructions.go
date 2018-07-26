@@ -24,8 +24,8 @@ import (
 	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
 )
 
 var (

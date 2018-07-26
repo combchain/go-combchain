@@ -20,7 +20,7 @@ import (
 	"math/big"
 
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 // StateDB is an EVM database for full state querying.

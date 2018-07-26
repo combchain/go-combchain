@@ -33,9 +33,9 @@ import (
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/hexutil"
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/log"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
 	"golang.org/x/crypto/ripemd160"
 )
 
