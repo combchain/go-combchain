@@ -20,8 +20,7 @@ import (
 	"math/big"
 
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
-
+	"github.com/combchain/go-combchain/types"
 )
 
 func NoopCanTransfer(db StateDB, from common.Address, balance *big.Int) bool {
@@ -70,7 +69,7 @@ func (NoopStateDB) AddLog(*types.Log)                                           
 func (NoopStateDB) AddPreimage(common.Hash, []byte)                                    {}
 func (NoopStateDB) ForEachStorage(common.Address, func(common.Hash, common.Hash) bool) {}
 
-func (NoopStateDB) ForEachStorageByteArray(common.Address, func(common.Hash, []byte) bool){}
-func (NoopStateDB) GetStateByteArray(addr common.Address, hs common.Hash) []byte 	   {return nil}
+func (NoopStateDB) ForEachStorageByteArray(common.Address, func(common.Hash, []byte) bool) {}
+func (NoopStateDB) GetStateByteArray(addr common.Address, hs common.Hash) []byte           { return nil }
 
-func (NoopStateDB) SetStateByteArray(common.Address, common.Hash, []byte)			   {}
+func (NoopStateDB) SetStateByteArray(common.Address, common.Hash, []byte) {}

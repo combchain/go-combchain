@@ -38,7 +38,7 @@ import (
 	"math/big"
 	"unsafe"
 
-	"github.com/combchain/go-combchain/core/state"
+	"github.com/combchain/go-combchain/state"
 	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/params"
 )

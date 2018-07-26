@@ -4,7 +4,7 @@ package vm
 
 import (
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 	"math/big"
 )
 
@@ -31,7 +31,7 @@ var (
 	otaBalancePercentdot001WStorageAddr = common.HexToAddress(combStampdot001)
 	otaBalancePercentdot002WStorageAddr = common.HexToAddress(combStampdot002)
 	otaBalancePercentdot005WStorageAddr = common.HexToAddress(combStampdot005)
-	
+
 	otaBalancePercentdot003WStorageAddr = common.HexToAddress(combStampdot003)
 	otaBalancePercentdot006WStorageAddr = common.HexToAddress(combStampdot006)
 	otaBalancePercentdot009WStorageAddr = common.HexToAddress(combStampdot009)
@@ -39,19 +39,19 @@ var (
 	otaBalancePercentdot03WStorageAddr = common.HexToAddress(combStampdot03)
 	otaBalancePercentdot06WStorageAddr = common.HexToAddress(combStampdot06)
 	otaBalancePercentdot09WStorageAddr = common.HexToAddress(combStampdot09)
-	otaBalancePercentdot2WStorageAddr = common.HexToAddress(combStampdot2)
-	otaBalancePercentdot5WStorageAddr = common.HexToAddress(combStampdot5)
+	otaBalancePercentdot2WStorageAddr  = common.HexToAddress(combStampdot2)
+	otaBalancePercentdot5WStorageAddr  = common.HexToAddress(combStampdot5)
 
-	otaBalance10WStorageAddr       = common.HexToAddress(combcoin10)
-	otaBalance20WStorageAddr       = common.HexToAddress(combcoin20)
-	otaBalance50WStorageAddr       = common.HexToAddress(combcoin50)
-	otaBalance100WStorageAddr      = common.HexToAddress(combcoin100)
+	otaBalance10WStorageAddr  = common.HexToAddress(combcoin10)
+	otaBalance20WStorageAddr  = common.HexToAddress(combcoin20)
+	otaBalance50WStorageAddr  = common.HexToAddress(combcoin50)
+	otaBalance100WStorageAddr = common.HexToAddress(combcoin100)
 
-	otaBalance200WStorageAddr       = common.HexToAddress(combcoin200)
-	otaBalance500WStorageAddr       = common.HexToAddress(combcoin500)
-	otaBalance1000WStorageAddr      = common.HexToAddress(combcoin1000)
-	otaBalance5000WStorageAddr      = common.HexToAddress(combcoin5000)
-	otaBalance50000WStorageAddr     = common.HexToAddress(combcoin50000)
+	otaBalance200WStorageAddr   = common.HexToAddress(combcoin200)
+	otaBalance500WStorageAddr   = common.HexToAddress(combcoin500)
+	otaBalance1000WStorageAddr  = common.HexToAddress(combcoin1000)
+	otaBalance5000WStorageAddr  = common.HexToAddress(combcoin5000)
+	otaBalance50000WStorageAddr = common.HexToAddress(combcoin50000)
 )
 
 // PrecompiledContract is the basic interface for native Go contracts. The implementation

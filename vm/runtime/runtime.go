@@ -23,10 +23,10 @@ import (
 
 	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/core/vm"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/state"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // Config is a basic type specifying certain configuration flags for running

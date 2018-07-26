@@ -19,9 +19,9 @@ package runtime
 import (
 	"math/big"
 
+	"github.com/combchain/go-combchain"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core"
-	"github.com/combchain/go-combchain/core/vm"
+	"github.com/combchain/go-combchain/vm"
 )
 
 func NewEnv(cfg *Config) *vm.EVM {

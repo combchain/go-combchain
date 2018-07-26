@@ -31,8 +31,8 @@ import (
 	check "gopkg.in/check.v1"
 
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Tests that updating a state trie does not leak any database writes prior to
