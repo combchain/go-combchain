@@ -19,7 +19,7 @@ package core
 import (
 	"math/big"
 
-	"github.com/combchain/go-combchain/log"
+	"github.com/combchain/combchain/log"
 )
 
 // GasPool tracks the amount of gas available during

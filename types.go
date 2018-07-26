@@ -19,9 +19,9 @@ package core
 import (
 	"math/big"
 
-	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
+	"github.com/combchain/go-combchain/state"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // Validator is an interface which defines the standard for block validation. It

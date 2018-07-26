@@ -18,7 +18,7 @@ package core
 
 import (
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 // TxPreEvent is posted when a transaction enters the transaction pool.

@@ -25,13 +25,13 @@ import (
 	mrand "math/rand"
 	"time"
 
-	lru "github.com/hashicorp/golang-lru"
+	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/consensus"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
-	"github.com/combchain/go-combchain/log"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 const (

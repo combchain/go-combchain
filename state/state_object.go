@@ -23,8 +23,8 @@ import (
 	"math/big"
 
 	"github.com/combchain/combchain/crypto"
+	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/log"
 	"github.com/combchain/go-combchain/rlp"
 	"github.com/combchain/go-combchain/trie"
 )

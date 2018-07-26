@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/combchain/combchain/crypto"
-	"github.com/combchain/go-combchain/core/types"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Tests that transactions can be added to strict lists and list contents and

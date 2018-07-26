@@ -24,9 +24,9 @@ import (
 
 	"github.com/combchain/combchain/crypto/sha3"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/rlp"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Tests block header storage and retrieval operations.

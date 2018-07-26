@@ -22,10 +22,10 @@ import (
 	"time"
 
 	"github.com/combchain/go-combchain/consensus/ethash"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // Tests that simple header verification works, for both good and bad blocks.

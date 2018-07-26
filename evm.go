@@ -21,8 +21,8 @@ import (
 
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/consensus"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // ChainContext supports retrieving headers and consensus parameters from the

@@ -25,13 +25,13 @@ import (
 	"strings"
 
 	"github.com/combchain/combchain/crypto"
+	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/accounts/abi"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/log"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 var (
