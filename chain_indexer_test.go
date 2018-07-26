@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Runs multiple tests with randomized parameters.

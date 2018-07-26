@@ -20,9 +20,9 @@ import (
 	"container/list"
 	"fmt"
 
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/event"
+	"github.com/combchain/go-combchain/types"
 )
 
 // Implement our EthTest Manager

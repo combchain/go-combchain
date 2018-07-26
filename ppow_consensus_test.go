@@ -17,13 +17,13 @@
 package core
 
 import (
-	"math/big"
 	"github.com/combchain/go-combchain/consensus/ethash"
-	"github.com/combchain/go-combchain/core/vm"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
+	"math/big"
 	"testing"
-	"github.com/combchain/go-combchain/core/types"
 )
 
 /*
@@ -39,14 +39,15 @@ verifySignerIdentity and snapshot are called by
 */
 
 var (
-	genesisBlock * types.Block
+	genesisBlock *types.Block
 )
+
 // newTestBlockChain creates a blockchain without validation.
 func newTestBlockChainEx(fake bool) (*BlockChain, *ChainEnv) {
 	db, _ := ethdb.NewMemDatabase()
 	gspec := DefaultPPOWTestingGenesisBlock()
 	gspec.ExtraData = make([]byte, 0)
-	for k := range signerSet{
+	for k := range signerSet {
 		gspec.ExtraData = append(gspec.ExtraData, k.Bytes()...)
 	}
 	gspec.Difficulty = big.NewInt(1)
@@ -64,9 +65,9 @@ func newTestBlockChainEx(fake bool) (*BlockChain, *ChainEnv) {
 	return blockchain, chainEnv
 }
 
-func TestVerifyHeader(t *testing.T)  {
+func TestVerifyHeader(t *testing.T) {
 	blockchain, chainEnv := newTestBlockChainEx(false)
-	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, []int{1,2,3}, nil)
+	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, []int{1, 2, 3}, nil)
 	err := blockchain.engine.VerifyHeader(blockchain, blocks[0].Header(), true)
 	if err != nil {
 		t.Error("valid block verify failed unexpect")
@@ -74,7 +75,7 @@ func TestVerifyHeader(t *testing.T)  {
 
 	headers := make([]*types.Header, len(blocks))
 	seals := make([]bool, 0)
-	for i, block := range blocks{
+	for i, block := range blocks {
 		headers[i] = block.Header()
 		seals = append(seals, true)
 	}
@@ -82,21 +83,21 @@ func TestVerifyHeader(t *testing.T)  {
 	abort, results := blockchain.engine.VerifyHeaders(blockchain, headers, seals)
 	defer close(abort)
 
-	for _ = range headers {
-		err := <- results
+	for range headers {
+		err := <-results
 		if err != nil {
 			t.Error("valid headers verify failed unexpected")
 		}
 	}
 }
 
-func TestVerifyHeadersFailed(t *testing.T)  {
+func TestVerifyHeadersFailed(t *testing.T) {
 	blockchain, chainEnv := newTestBlockChainEx(false)
-	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, []int{1,2,3,4, 1,1,1}, nil)
+	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, []int{1, 2, 3, 4, 1, 1, 1}, nil)
 
 	headers := make([]*types.Header, len(blocks))
 	seals := make([]bool, 0)
-	for i, block := range blocks{
+	for i, block := range blocks {
 		headers[i] = block.Header()
 		seals = append(seals, true)
 	}
@@ -105,8 +106,8 @@ func TestVerifyHeadersFailed(t *testing.T)  {
 	defer close(abort)
 
 	isFail := false
-	for _ = range headers {
-		err := <- results
+	for range headers {
+		err := <-results
 		//fmt.Printf("verify %s \n", headers[i].Coinbase.String())
 		if err != nil {
 			isFail = true
@@ -118,11 +119,10 @@ func TestVerifyHeadersFailed(t *testing.T)  {
 	}
 }
 
-
-func TestVerifyHeaderLoadSnapshot(t *testing.T)  {
+func TestVerifyHeaderLoadSnapshot(t *testing.T) {
 	blockchain, chainEnv := newTestBlockChainEx(true)
 	signerSeq := make([]int, 0)
-	for i := 0 ; i < 100; i++ {
+	for i := 0; i < 100; i++ {
 		signerSeq = append(signerSeq, i%20)
 	}
 	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, signerSeq, nil)
@@ -134,12 +134,11 @@ func TestVerifyHeaderLoadSnapshot(t *testing.T)  {
 	}
 }
 
-
-func create2ChainContextSameGenesis()(*BlockChain, *ChainEnv, *BlockChain, *ChainEnv) {
+func create2ChainContextSameGenesis() (*BlockChain, *ChainEnv, *BlockChain, *ChainEnv) {
 	db, _ := ethdb.NewMemDatabase()
 	gspec := DefaultPPOWTestingGenesisBlock()
 	gspec.ExtraData = make([]byte, 0)
-	for k := range signerSet{
+	for k := range signerSet {
 		gspec.ExtraData = append(gspec.ExtraData, k.Bytes()...)
 	}
 	gspec.Difficulty = big.NewInt(1)
@@ -164,42 +163,42 @@ func create2ChainContextSameGenesis()(*BlockChain, *ChainEnv, *BlockChain, *Chai
 	return blockchain, chainEnv, newBlockChain, newChainEnv
 
 }
-func TestVerifyPPOWReorgSuccess(t *testing.T){
+func TestVerifyPPOWReorgSuccess(t *testing.T) {
 	blockchain, chainEnv, _, longChainEnv := create2ChainContextSameGenesis()
 	signerSeq := make([]int, 0)
-	for i := 0 ; i < 100; i++ {
+	for i := 0; i < 100; i++ {
 		signerSeq = append(signerSeq, i%10)
 	}
 	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, signerSeq, nil)
 	blockchain.InsertChain(blocks[:99])
 
 	longSignerSeq := make([]int, 0)
-	for i := 0 ; i < 110; i++ {
+	for i := 0; i < 110; i++ {
 		longSignerSeq = append(longSignerSeq, (i+1)%20)
 	}
 	longBlocks, _ := longChainEnv.GenerateChainEx(genesisBlock, longSignerSeq, nil)
 	_, err := blockchain.InsertChain(longBlocks)
-	if err != nil{
-		t.Errorf("valid reorg failed: %s\n" , err.Error())
+	if err != nil {
+		t.Errorf("valid reorg failed: %s\n", err.Error())
 	}
 }
 
-func TestVerifyPPOWReorgFailed(t *testing.T){
+func TestVerifyPPOWReorgFailed(t *testing.T) {
 	blockchain, chainEnv, _, longChainEnv := create2ChainContextSameGenesis()
 	signerSeq := make([]int, 0)
-	for i := 0 ; i < 100; i++ {
+	for i := 0; i < 100; i++ {
 		signerSeq = append(signerSeq, i%20)
 	}
 	blocks, _ := chainEnv.GenerateChainEx(genesisBlock, signerSeq, nil)
 	blockchain.InsertChain(blocks[:99])
 
 	longSignerSeq := make([]int, 0)
-	for i := 0 ; i < 110; i++ {
+	for i := 0; i < 110; i++ {
 		longSignerSeq = append(longSignerSeq, (i+1)%10)
 	}
 	longBlocks, _ := longChainEnv.GenerateChainEx(genesisBlock, longSignerSeq, nil)
 	_, err := blockchain.InsertChain(longBlocks)
-	if err == nil{
-		t.Errorf("invalid reorg shouldn't sucess: %s\n" , err.Error())
+	if err == nil {
+		t.Errorf("invalid reorg shouldn't sucess: %s\n", err.Error())
 	}
 }

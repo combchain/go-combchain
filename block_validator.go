@@ -22,9 +22,9 @@ import (
 
 	"github.com/combchain/go-combchain/common/math"
 	"github.com/combchain/go-combchain/consensus"
-	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/state"
+	"github.com/combchain/go-combchain/types"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and

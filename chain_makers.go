@@ -26,11 +26,11 @@ import (
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/consensus"
 	"github.com/combchain/go-combchain/consensus/ethash"
-	"github.com/combchain/go-combchain/core/state"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
+	"github.com/combchain/go-combchain/state"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // So we can deterministically seed different blockchains

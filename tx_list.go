@@ -23,10 +23,10 @@ import (
 	"math/big"
 	"sort"
 
+	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
-	"github.com/combchain/go-combchain/core/vm"
-	"github.com/combchain/go-combchain/log"
+	"github.com/combchain/go-combchain/types"
+	"github.com/combchain/go-combchain/vm"
 )
 
 // nonceHeap is a heap.Interface implementation over 64bit unsigned integers for

@@ -23,11 +23,11 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
-	"github.com/combchain/go-combchain/core/types"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/event"
-	"github.com/combchain/go-combchain/log"
+	"github.com/combchain/go-combchain/types"
 )
 
 // ChainIndexerBackend defines the methods needed to process chain segments in
