@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/combchain/go-combchain/vm/nvm/interfaces"
+	"github.com/combchain/go-combchain/vm/avm/interfaces"
 	"math/big"
 )
 

@@ -1,6 +1,6 @@
 package vm
 
-import "github.com/combchain/go-combchain/vm/nvm/utils"
+import "github.com/combchain/go-combchain/vm/avm/utils"
 
 type ExecutionContext struct {
 	Script             []byte
