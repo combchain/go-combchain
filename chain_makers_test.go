@@ -25,7 +25,7 @@ import (
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 	"github.com/combchain/go-combchain/types"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 func ExampleChainEnv_GenerateChain() {

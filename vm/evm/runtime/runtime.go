@@ -26,7 +26,7 @@ import (
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/params"
 	"github.com/combchain/go-combchain/state"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 // Config is a basic type specifying certain configuration flags for running
