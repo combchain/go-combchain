@@ -2,8 +2,8 @@ package vm
 
 import (
 	"encoding/binary"
-	"github.com/combchain/go-combchain/vm/nvm/errors"
-	"github.com/combchain/go-combchain/vm/nvm/types"
+	"github.com/combchain/go-combchain/vm/avm/errors"
+	"github.com/combchain/go-combchain/vm/avm/types"
 	"math/big"
 	"reflect"
 )

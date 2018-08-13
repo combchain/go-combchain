@@ -1,7 +1,7 @@
 package vm
 
 import (
-	"github.com/combchain/go-combchain/vm/nvm/errors"
+	"github.com/combchain/go-combchain/vm/avm/errors"
 	"io"
 	"time"
 )

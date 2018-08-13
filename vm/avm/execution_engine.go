@@ -1,8 +1,8 @@
 package vm
 
 import (
-	"github.com/combchain/go-combchain/vm/nvm/interfaces"
-	"github.com/combchain/go-combchain/vm/nvm/utils"
+	"github.com/combchain/go-combchain/vm/avm/interfaces"
+	"github.com/combchain/go-combchain/vm/avm/utils"
 	"io"
 	_ "math/big"
 	_ "sort"

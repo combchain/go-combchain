@@ -4,7 +4,7 @@ import (
 	"errors"
 	"github.com/combchain/combchain/crypto"
 	"github.com/combchain/combchain/log"
-	. "github.com/combchain/go-combchain/vm/nvm/errors"
+	. "github.com/combchain/go-combchain/vm/avm/errors"
 )
 
 type ECDsaCrypto struct {
