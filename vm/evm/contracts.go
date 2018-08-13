@@ -36,7 +36,7 @@ import (
 	"github.com/combchain/go-combchain/common/math"
 	"github.com/combchain/go-combchain/params"
 	"github.com/combchain/go-combchain/types"
-	"golang.org/x/crypto/ripemd160"
+	"github.com/golang/crypto/ripemd160"
 )
 
 // RunPrecompiledContract runs and evaluates the output of a precompiled contract.
