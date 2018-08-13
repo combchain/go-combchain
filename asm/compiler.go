@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	"github.com/combchain/go-combchain/common/math"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 // Compiler contains information about the parsed source
