@@ -322,7 +322,7 @@ func gasCall(gt params.GasTable, evm *EVM, contract *Contract, stack *Stack, mem
 		transfersValue = stack.Back(2).Sign() != 0
 		address        = common.BigToAddress(stack.Back(1))
 
-		eip158         = true//evm.ChainConfig().IsEIP158(evm.BlockNumber)
+		eip158 = true //evm.ChainConfig().IsEIP158(evm.BlockNumber)
 	)
 
 	if eip158 {
@@ -406,20 +406,20 @@ func gasSuicide(gt params.GasTable, evm *EVM, contract *Contract, stack *Stack, 
 	var gas uint64
 	// EIP150 homestead gas reprice fork:
 	//if evm.ChainConfig().IsEIP150(evm.BlockNumber) {
-		gas = gt.Suicide
-		var (
-			address = common.BigToAddress(stack.Back(0))
-			eip158  = true//evm.ChainConfig().IsEIP158(evm.BlockNumber)
-		)
+	gas = gt.Suicide
+	var (
+		address = common.BigToAddress(stack.Back(0))
+		eip158  = true //evm.ChainConfig().IsEIP158(evm.BlockNumber)
+	)
 
-		if eip158 {
-			// if empty and transfers value
-			if evm.StateDB.Empty(address) && evm.StateDB.GetBalance(contract.Address()).Sign() != 0 {
-				gas += gt.CreateBySuicide
-			}
-		} else if !evm.StateDB.Exist(address) {
+	if eip158 {
+		// if empty and transfers value
+		if evm.StateDB.Empty(address) && evm.StateDB.GetBalance(contract.Address()).Sign() != 0 {
 			gas += gt.CreateBySuicide
 		}
+	} else if !evm.StateDB.Exist(address) {
+		gas += gt.CreateBySuicide
+	}
 	//}
 
 	if !evm.StateDB.HasSuicided(contract.Address()) {

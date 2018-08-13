@@ -19,7 +19,7 @@ package runtime
 import (
 	"math/big"
 
-	"github.com/combchain/go-combchain"
+	"github.com/combchain/go-combchain/"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/vm/evm"
 )
