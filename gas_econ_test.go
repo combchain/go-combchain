@@ -20,7 +20,7 @@ import (
 	"github.com/combchain/go-combchain/params"
 	"github.com/combchain/go-combchain/state"
 	"github.com/combchain/go-combchain/types"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 const (

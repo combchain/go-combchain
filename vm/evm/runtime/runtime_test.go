@@ -25,7 +25,7 @@ import (
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/ethdb"
 	"github.com/combchain/go-combchain/state"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 func TestDefaults(t *testing.T) {

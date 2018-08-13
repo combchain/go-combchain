@@ -26,7 +26,7 @@ import (
 	"github.com/combchain/combchain/log"
 	"github.com/combchain/go-combchain/common"
 	"github.com/combchain/go-combchain/types"
-	"github.com/combchain/go-combchain/vm"
+	"github.com/combchain/go-combchain/vm/evm"
 )
 
 // nonceHeap is a heap.Interface implementation over 64bit unsigned integers for
